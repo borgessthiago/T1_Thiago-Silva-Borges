@@ -1,0 +1,78 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>T1 - FORCA</title>
+    <link rel="shortcut icon" href="img/icone-title.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-social.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/forca.css" />
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/forca.js"></script>
+  </head>
+  
+  <body class="" style="">
+    <div id="barra-topo">
+        <div class="container">
+          <div class="navbar-header">
+            <div id="menu-hide"></div>
+            <button type="button" title="Opções / Status" data-target=".navbar-bootsnipp-collapse"
+            data-toggle="collapse" class="navbar-toggle">
+            </button>
+          </div>
+          <div class="animbrand">
+            <a class="navbar-brand" title="Sobre">T1 - JOGO DA FORCA</a>
+          </div>
+          <div class="collapse navbar-collapse navbar-bootsnipp-collapse">
+            <ul id="menu-opcoes" ></ul>
+          </div>
+        </div>
+    </div>
+    
+      <div id="conteudo" class="col-md-6 col-md-offset-3">
+        <div class="text-left iniciar">
+          <button type="button" class="btn btn-primary btn-lg" 
+          data-target="#iniciar" data-toggle="modal">
+            <span class="glyphicon glyphicon-play"></span>
+            &nbsp;Iniciar
+          </button>
+          <div class="bs-example">
+            <div>
+              <img src="img/boneco/0.png">
+              <div class="caption">
+                <h3 class="text-center">
+                  _ _ _ _ _
+                </h3>
+                <form class="form-horizontal">
+                  <div class="input-group busca">
+                    <input type="text" maxlength="1" id="letra" placeholder="Escolha uma letra"
+                    class="form-control">
+                    <div class="input-group-btn">
+                      <button type="submit" onclick="virificaLtr();return false;" class="btn btn-primary">
+                        <i class="glyphicon glyphicon-search">
+                        </i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal - Modo de jogo -->
+        <div role="dialog" tabindex="-1" id="iniciar" class="modal fade">
+          <div class="modal-dialog modal-meio">
+            <div class="modal-content col-md-9 col-md-offset-3">
+              <div class="modal-body">
+                <div class="text-center" style="padding:20px">
+                  <button type="button" data-dismiss="modal" onclick="modJogo(1);" class="btn btn-primary btn-lg">
+                    &nbsp;Digite uma palavra e comece a jogar!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</html>
